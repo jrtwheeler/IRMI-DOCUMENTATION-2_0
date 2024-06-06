@@ -8,25 +8,20 @@ const { themes: prismThemes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "IRMI Learning",
-  tagline: "Learning center for internal processes",
-  favicon: 'img/docusaurus.png',
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  customFields: {
-    // Put your custom environment here
-    first_key: "JimVALUEONE",
-    second_key: "JimVALUETWO",
-  },
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "IRMI", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -62,13 +57,13 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -82,19 +77,22 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: "Home",
+        title: 'My Site',
         logo: {
-          alt: "My Site Logo",
-          src: "img/docusaurus.png",
+          alt: 'My Site Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
-            "label": "Documentation",
-            "to": "docs"
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Tutorial',
           },
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://irmi.zendesk.com/hc/en-us',
-            label: 'Zendesk',
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
             position: 'right',
           },
         ],
@@ -103,23 +101,44 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: "IRMI Sites",
+            title: 'Docs',
             items: [
               {
-                label: "Legacy IRMI Online",
-                href: "https://www.irmi.com",
-              },
-              {
-                label: "Captive",
-                href: "https://www.captive.com/",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/IRMIowl",
+                label: 'Tutorial',
+                to: '/docs/intro',
               },
             ],
-          }
-          // Add another json object here to add another column
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
