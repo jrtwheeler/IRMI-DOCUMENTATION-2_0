@@ -23,7 +23,15 @@ const config = {
   organizationName: "IRMI", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
 
-   
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // whether to index docs pages
+        indexDocs: true,
+      },
+    ],
+  ],
 
   presets: [
     [
