@@ -8,20 +8,23 @@ const { themes: prismThemes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "IRMI Learning",
-  tagline: "Learning center for internal processes",
-  url: 'https://your-docusaurus-test-site.com',
-  customFields: {
-    // Put your custom environment here
-    first_key: "JimVALUEONE",
-    second_key: "JimVALUETWO",
-  },
-  baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: "img/docusaurus.png",
-  organizationName: "IRMI", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
+  favicon: 'img/favicon.ico',
+
+  // Set the production url of your site here
+  url: 'https://your-docusaurus-site.example.com',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
+
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'warn',
 
   themes: [
     // ... Your other themes.
@@ -35,27 +38,29 @@ const config = {
   ],
 
 
-  // presets: [
-  //   [
-  //     'classic',
-  //     /** @type {import('@docusaurus/preset-classic').Options} */
-  //     ({
-  //       docs: {
-  //         sidebarPath: require.resolve('./sidebars.js'),
-  //         // Please change this to your repo.
-  //         // editUrl: 'https://https://github.com/jrtwheeler/IRMI_Doc_Site',
-  //       },
-  //       theme: {
-  //         customCss: require.resolve('./src/css/custom.css'),
-  //       },
-  //     }),
-  //   ],
-  // ],
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          // editUrl: 'https://https://github.com/jrtwheeler/IRMI_Doc_Site',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
+  ],
+
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: "Home",
         logo: {
