@@ -3,11 +3,13 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: white;
+  color: #7AB2B9;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +22,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+iframe {
+  min-width: 400px !important; 
+  width: 100%; 
+  min-height: 600px !important;
+  border: 10px;
+  box-shadow: 10px 10px 10px 10px lightgray;
+  border-radius: 15px;
+}
+
+.col-6 {
+  margin: 70px;
+}
+
+.webchat--css-gspqz-1dmjbed.webchat__bubble:not(.webchat__bubble--from-user) .webchat__bubble__content {
+    background-color: aliceblue !important;
+}
+
+.webchat__bubble__nub-pad {
+  background-color: aliceblue !important; 
 }
