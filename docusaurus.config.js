@@ -35,22 +35,22 @@ const config = {
   ],
 
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // editUrl: 'https://https://github.com/jrtwheeler/IRMI_Doc_Site',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
-  ],
+  // presets: [
+  //   [
+  //     'classic',
+  //     /** @type {import('@docusaurus/preset-classic').Options} */
+  //     ({
+  //       docs: {
+  //         sidebarPath: require.resolve('./sidebars.js'),
+  //         // Please change this to your repo.
+  //         // editUrl: 'https://https://github.com/jrtwheeler/IRMI_Doc_Site',
+  //       },
+  //       theme: {
+  //         customCss: require.resolve('./src/css/custom.css'),
+  //       },
+  //     }),
+  //   ],
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
